@@ -1,0 +1,390 @@
+<!---Log-in-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #1F252E;
+        }
+
+        /*nav */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #00E8F8;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #00E8F8;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+
+        section {
+            margin: 2rem 8.5rem;
+            ;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+
+        .social a {
+            color: #00E8F8;
+            font-size: 1rem;
+            border: 1.6px solid #00E8F8;
+            border-radius: 50%;
+            padding: .35rem;
+            text-align: center;
+            width: 26px;
+        }
+
+        .social a:hover {
+            color: white;
+            background-color: #00E8F8;
+            box-shadow: 0 0 20px #00E8F8;
+            transition: all .3s ease-in-out;
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+        }
+
+        
+
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: white;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+
+        }
+        .text a{
+            text-decoration: none;
+            color: #1F252E;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Black_White_Minimalist_Logo-removebg-preview.png" alt="" srcset="" style="width: 150px; height: 150px;">
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+        <ul>
+            <li style="--bg-color: #a9c700;">
+                <img width="50" height="50" src="https://img.icons8.com/flat-round/64/home--v1.png" alt="home--v1"/>
+                <span class="icon"><i class="ph-house"></i></span>
+                <span class="text">Home</span>
+            </li>
+            <li style="--bg-color: #E9724C;">
+               <img width="52" height="52" src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+                <span class="icon"><i class="ph-user"></i></span>
+                <span class="text"><a href="file:///E:/about/about.html">About us</a></span>
+            </li>
+            <li style="--bg-color: #C5283D;">
+                <img width="52" height="52" src="https://img.icons8.com/windows/32/22C3E6/creative-commons-by.png" alt="creative-commons-by"/>
+                <span class="icon"><i class="ph-cards"></i></span>
+                <span class="text"><a href="file:///E:/me/my.html">Projects</a></span>
+            </li>
+            <li style="--bg-color: #54bcce;">
+               <img width="52" height="52" src="https://img.icons8.com/fluency/48/rebalance-portfolio.png" alt="rebalance-portfolio"/>
+                <span class="icon"><i class="ph-pencil-simple"></i></span>
+                <span class="text">Portfolio</span>
+            </li>
+            <li style="--bg-color: #0c68a5;">
+              <img width="40" height="40" src="https://img.icons8.com/color/48/phone.png" alt="phone"/>
+                <span class="icon"><i class="ph-phone"></i></span>
+                <span class="text">Contact us</span>
+            </li>
+        </ul>
+    </header>
+
+
+    <section>
+        <div class="main">
+            <div class="detail"><!---Sarah -->
+                <h1><span>Hi, It's Me</span> <br> I'm <span style="color:#00E8F8;">YASIR AHMED</span></h1>
+                <p>THIS IS MY PORTFOLIO WEBSITE <br>  </p>
+                <div class="social">
+                    <a href="https://github.com/"><i class="bi bi-github"></i></a>
+                    <a href="https://www.instagram.com/mr_yasir_qureshi/?fbclid=IwAR3BGDVQKtjdR9R2Xy4KMxmynozh9h9zZog4Ug0J2NQmPqfymMNM4YEKcJ4"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/yasir-ahmed-ba420a287/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094087670751"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+           
+<style>
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: left;
+    align-items: self-start;
+    font-family: 'Times New Roman', Times, serif;
+   
+  }
+.button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+button a:hover{
+    color: #00E8F8;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+}
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    .button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  /* Reset some default styles for the footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-details, .search-bar {
+    flex: 1;
+    margin: 10px;
+}
+
+.contact-details h3, .search-bar h3 {
+    margin-top: 0;
+}
+
+/* Style the contact details */
+.contact-details p {
+    margin: 5px 0;
+}
+
+/* Style the search bar */
+.search-bar form {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style the button on hover */
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+.is{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #1F252E;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+  <button class="button"><a href="https://drive.google.com/file/d/10Xuq_lJTtWCUySm49rgVIAWzOyEOZO88/view?usp=sharing">DOWNLOAD RESUME</a></button>
+
+
+        </div>
+    </section>
+    
+
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+</style>
+
+    <div class="url">
+        <!-- Your website content goes here -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <h5>On email</h5>
+                <br>
+                <p>Email: yasirahmed1803@gmail.com</p>
+                
+            </div>
+            <div class="search-bar">
+                <h3>Search</h3>
+                <form action="#" method="GET">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            
+        </footer>
+        <div class="is">
+            &copy; 2023 PORTFOLIO WEBSITE
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
+
+
+
+  
+  
